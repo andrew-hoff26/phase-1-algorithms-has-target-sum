@@ -1,6 +1,26 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+  
+for (let i = 0; i < array.length; i++) {
+
+const complement = target -array[i]   
+for (let j = i + 1; j < array.length; j++) {
+if (array[j] === complement) return true;
+  }
 }
+return false
+
+}
+/* iterate each number in the array
+for the current number identify a compliment that 
+adds to the target (compliment = target - num)
+iterate through the rest of the array 
+check if the num is our compliment.
+if so return true.
+if i get the end of the array , return false.
+/*
+
+
 
 /* 
   Write the Big O time complexity of your function here
@@ -8,6 +28,14 @@ function hasTargetSum(array, target) {
 
 /* 
   Add your pseudocode here
+  hasTargetSum([22, 19, 4, 6, 30], 25)
+  iterate each number in the array
+  for the current number identify a compliment that 
+  adds to the target (compliment = target - num)
+  iterate through the rest of the array to check if 
+  the num is our compliment. if so return true.
+
+  if i get the end of the array , return false.
 */
 
 /*
